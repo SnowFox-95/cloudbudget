@@ -1,7 +1,7 @@
 {
-  "name": "gulp2023fromzer0",
+  "name": "cloudbudget_gulp",
   "version": "1.0.0",
-  "description": "gulp_ver.2023-From0to1",
+  "description": "new site with gulp",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
