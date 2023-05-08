@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 :root {
-    --white: #ffffff;
-    --red  : #ff0000;
+    --firstcolor     : #ffffff;
+    --tempcolor       : #ff0000;
+    --secondary: #D52047;
 }
 
 * {
@@ -18,14 +19,17 @@ button {
 
 a {
     text-decoration: none;
-    color          : var(--white);
+    color          : var(--firstcolor);
 }
 
 body {
     font: {
         family: 'Lato', sans-serif;
         size  : 14px;
+        weight: 400;
     }
+
+    color : var(--firstcolor);
 }
 
 .container {
@@ -35,7 +39,89 @@ body {
 }
 
 .header__inner {
-    background-color: var(--red);
+    background-color: var(--tempcolor);
     display         : flex;
     justify-content : space-between;
+    align-items     : center;
+    text-transform  : uppercase;
+    padding-top     : 55px;
+}
+
+nav a {
+
+    margin-right: 10px;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+.header__info span {
+    margin-right: 41px;
+    position    : relative;
+}
+
+.header__info span::before {
+    content : url(../images/lang.svg);
+    position: absolute;
+    top     : -9px;
+    right   : 30px;
+
+}
+
+.header__info span::after {
+    content: url(../images/arrow.svg);
+    top    : -6px;
+    left   : 25px;
+}
+
+.header__info button {
+    border          : 1px solid var(--firstcolor);
+    padding         : 11px 29px;
+    text-transform  : uppercase;
+    color           : var(--white);
+    background-color: transparent;
+}
+
+.info {
+    background: {
+        image : url('../images/background.avif');
+        repeat: no-repeat;
+        size  : cover;
+    }
+
+
+}
+
+.info__block {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
+}
+
+.info__block h1 {
+    font: {
+        weight: 700;
+        size  : 72px;
+    }
+
+    margin-bottom: 39px;
+}
+
+.info__block p {
+    font: {
+        weight: 600;
+        size  : 24px;
+    }
+
+    width        : 28%;
+    text-align   : center;
+    margin-bottom: 39px;
+}
+
+.info__block button {
+    background   : var(--firstcolor);
+    border-radius: 6px;
+    color        : var(--secondary);
 }
