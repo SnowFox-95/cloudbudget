@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap');
 
 :root {
-    --firstcolor     : #ffffff;
-    --tempcolor       : #ff0000;
-    --secondary: #D52047;
+    --first : #ffffff;
+    --second: #D52047;
 }
 
 * {
@@ -19,36 +18,41 @@ button {
 
 a {
     text-decoration: none;
-    color          : var(--firstcolor);
+    color          : var(--first);
 }
 
 body {
+
     font: {
         family: 'Lato', sans-serif;
         size  : 14px;
         weight: 400;
     }
 
-    color : var(--firstcolor);
+    color     : var(--first);
+    overflow-x: hidden;
 }
 
 .container {
     min-width: 1100px;
     margin   : 0 auto;
-    padding  : 0 10px;
+    padding  : 0 165px 0 168px;
+    position : relative;
 }
 
 .header__inner {
-    background-color: var(--tempcolor);
-    display         : flex;
-    justify-content : space-between;
-    align-items     : center;
-    text-transform  : uppercase;
-    padding-top     : 55px;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    text-align     : center;
+    text-transform : uppercase;
+    padding        : 55px 165px 0 0;
+
+    position: absolute;
+    width   : 100%;
 }
 
 nav a {
-
     margin-right: 10px;
 }
 
@@ -66,31 +70,33 @@ nav a:last-child {
     position: absolute;
     top     : -9px;
     right   : 30px;
-
 }
 
 .header__info span::after {
-    content: url(../images/arrow.svg);
-    top    : -6px;
-    left   : 25px;
+    content : url(../images/arrow.svg);
+    position: absolute;
+    top     : -6px;
+    left    : 25px;
 }
 
 .header__info button {
-    border          : 1px solid var(--firstcolor);
+    border          : 1px solid var(--first);
     padding         : 11px 29px;
     text-transform  : uppercase;
-    color           : var(--white);
+    color           : var(--first);
     background-color: transparent;
+    margin-right    : 168px;
 }
 
 .info {
     background: {
-        image : url('../images/background.avif');
-        repeat: no-repeat;
-        size  : cover;
+        image   : url('../images/background.avif');
+        repeat  : no-repeat;
+        size    : cover;
+        position: center;
     }
 
-
+    padding : 187px 0;
 }
 
 .info__block {
@@ -106,7 +112,9 @@ nav a:last-child {
         size  : 72px;
     }
 
-    margin-bottom: 39px;
+    text-transform: uppercase;
+    margin-bottom : 39px;
+    letter-spacing: 0.05em;
 }
 
 .info__block p {
@@ -116,12 +124,71 @@ nav a:last-child {
     }
 
     width        : 28%;
+    line-height  : 150%;
     text-align   : center;
     margin-bottom: 39px;
 }
 
 .info__block button {
-    background   : var(--firstcolor);
+    background   : var(--first);
     border-radius: 6px;
-    color        : var(--secondary);
+    color        : var(--second);
+
+    font: {
+        weight: 600;
+    }
+
+    text-transform: uppercase;
+    padding       : 17px 52px;
+}
+
+.possibilities {
+    display    : flex;
+    color      : #000;
+    align-items: center;
+    padding-top: 94px;
+}
+
+.possibilities__info h2 {
+    font: {
+        weight: 600;
+        size  : 36px;
+    }
+
+    margin-top   : 54px;
+    width        : 70%;
+    margin-bottom: 45px;
+}
+
+.possibilities__info p {
+    margin-bottom: 19px;
+    width        : 40%;
+}
+
+.link {
+    color: #ed4c5c;
+}
+
+.possibilities__video {
+    position: relative;
+}
+
+.possibilities__video img {
+    border-radius: 15px;
+    padding-right: 92px;
+}
+
+.possibilities__video::before {
+    content: "";
+
+    background: {
+        image: url(../images/playbtn.avif)
+    }
+
+    width    : 66px;
+    height   : 66px;
+    position : absolute;
+    left     : 42%;
+    top      : 42%;
+    transform: translate (-50%, -50%);
 }
