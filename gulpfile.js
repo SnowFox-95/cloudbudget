@@ -23,6 +23,7 @@ const fonter = require("gulp-fonter");
 const ttf2woff2 = require("gulp-ttf2woff2");
 const svgSprite = require("gulp-svg-sprite");
 const include = require("gulp-include");
+const ghPages = require("gulp-gh-pages");
 
 function pages() {
   return src("app/pages/*.html")
@@ -124,12 +125,19 @@ function building() {
       "app/fonts/*.*",
       "app/js/main.min.js",
       "app/**/*.html",
+      "!app/components/*.*",
+      "!app/pages/*.*",
     ],
     {
       base: "app",
     }
   ).pipe(dest("dist"));
 }
+
+function deploying() {
+  return src('./dist/**/*')
+    .pipe(ghPages());
+};
 
 exports.styles = styles;
 exports.images = images;
@@ -139,6 +147,9 @@ exports.scripts = scripts;
 exports.pages = pages;
 exports.watching = watching;
 exports.building = building;
+exports.deploying = deploying;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, images, fonts, scripts, pages, watching);
+exports.default = parallel(styles, images, fonts, scripts, sprite , pages, watching);
+exports.deploy = series(cleanDist,building,deploying);
+
