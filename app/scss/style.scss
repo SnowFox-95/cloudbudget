@@ -294,3 +294,46 @@ nav a:last-child {
     width    : 68%;
     margin   : 0 auto;
 }
+
+.swiper {
+    width : 600px;
+    height: 400px;
+}
+
+
+.focus {
+    background-color: #ed4c5c;
+    padding         : 95px 0 0 0;
+}
+
+.slide {
+    border-radius: 8px;
+}
+
+.focus__inner {
+    display    : flex;
+    align-items: center;
+}
+
+.focus-content {
+    width: 60%;
+}
+
+.focus-content h3 {
+    font: {
+        weight: 600;
+        size  : 36px;
+    }
+
+    width        : 70%;
+    margin-bottom: 24px;
+}
+
+.focus-content p {
+    margin-bottom: 40px;
+    width        : 78%;
+}
+
+.focus-content__ico img {
+    margin-right: 23px;
+}
