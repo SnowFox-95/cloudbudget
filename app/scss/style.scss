@@ -337,3 +337,52 @@ nav a:last-child {
 .focus-content__ico img {
     margin-right: 23px;
 }
+
+.contact {
+    display        : flex;
+    color          : #000;
+    padding        : 117px 176px 123px 168px;
+    justify-content: space-between;
+}
+
+.contact h2 {
+    text-align   : left;
+    margin-bottom: 53px;
+}
+
+.contact__intro p {
+    width: 70%;
+}
+
+.contact__form button {
+    background    : #ED4C5C;
+    border        : 1.5px solid #ED4C5C;
+    border-radius : 6px;
+    color         : #fff;
+    text-transform: uppercase;
+    padding       : 17px 34px;
+}
+
+#firstname,
+#secondname,
+#phone,
+#select {
+    border       : 1px solid #333333;
+    border-radius: 6px;
+    color        : rgba(19, 39, 67, 0.5);
+    padding      : 21px 0 20px 31px;
+    margin-bottom: 24px;
+}
+
+#firstname {
+    margin-right: 30px;
+}
+
+#phone {
+    padding-right: 235px;
+}
+
+#select {
+    padding-right: 300px;
+    margin-bottom: 27px;
+}
