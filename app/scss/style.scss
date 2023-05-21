@@ -386,3 +386,68 @@ nav a:last-child {
     padding-right: 300px;
     margin-bottom: 27px;
 }
+
+.footer__block {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    color          : #000;
+}
+
+.footer__block li {
+    list-style : none;
+    line-height: 160%;
+}
+
+.footer__block a {
+    color          : #000;
+    text-decoration: none;
+}
+
+.copyright p {
+    color: #000;
+}
+
+.copyright p:last-child {
+    margin-bottom: 86px;
+}
+
+.footer-subtitle {
+    font: {
+        weight: 700;
+        size  : 18px;
+    }
+
+    line-height  : 22px;
+    margin-bottom: 33px;
+}
+
+.footer__address p {
+    width: 50%;
+}
+
+.footer__address {
+    padding-bottom: 175px;
+}
+
+.footer__services {
+    padding-right : 180px;
+    padding-bottom: 110px;
+}
+
+.footer__contacts {
+    padding-right : 165px;
+    padding-bottom: 160px;
+}
+
+
+
+.footer__icons img {
+    margin-top: 20px;
+    width     : 25px;
+    height    : 25px;
+}
+
+.footer__support {
+    padding-bottom: 215px;
+}
