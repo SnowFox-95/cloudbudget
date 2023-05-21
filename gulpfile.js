@@ -63,7 +63,7 @@ function images() {
     .pipe(dest("app/images"));
 }
 
-function sprite() {
+/* function sprite() {
   return src("app/images/*.svg")
     .pipe(
       svgSprite({
@@ -76,7 +76,7 @@ function sprite() {
       })
     )
     .pipe(dest("app/images"));
-}
+} */
 
 function scripts() {
   return src(["app/js/main.js"])
@@ -118,9 +118,9 @@ function building() {
     [
       "app/css/style.min.css",
       "app/images/*.*",
-      "!app/images/**/*.html",
-      "!app/images/*.svg",
-      "app/images/sprite.svg",
+      /* "!app/images/stack/*.*", */
+      "app/images/*.svg",
+      /* "!app/images/sprite.svg", */
       "app/fonts/*.*",
       "app/js/main.min.js",
       "app/**/*.html",
@@ -136,11 +136,12 @@ function building() {
 exports.styles = styles;
 exports.images = images;
 exports.fonts = fonts;
-exports.sprite = sprite;
+/* exports.sprite = sprite; */
 exports.scripts = scripts;
 exports.pages = pages;
 exports.watching = watching;
 exports.building = building;
+exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, images, fonts, scripts, sprite, pages, watching);
+exports.default = parallel(styles, images, fonts, scripts,  pages, watching);
