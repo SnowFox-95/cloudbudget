@@ -1,6 +1,4 @@
-# cloudBudget
-
-![image](https://github.com/SnowFox-95/cloudbudget_gulp/assets/17219495/ea31c664-d730-4b7c-9a02-eb18edf6e512)
+#  ![image](https://github.com/SnowFox-95/cloudbudget_gulp/assets/17219495/ea31c664-d730-4b7c-9a02-eb18edf6e512) CLOUDBUDGET
 
 Проект посвящен ПО для ведения облачной бухгалтерии
 
