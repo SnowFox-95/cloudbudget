@@ -143,10 +143,11 @@ nav a:last-child {
 }
 
 .possibilities {
-    display    : flex;
-    color      : #000;
-    align-items: center;
-    padding-top: 94px;
+    display        : flex;
+    color          : #000;
+    align-items    : center;
+    justify-content: space-between;
+    padding-top    : 94px;
 }
 
 .possibilities__info h2 {
@@ -191,4 +192,71 @@ nav a:last-child {
     left     : 42%;
     top      : 42%;
     transform: translate (-50%, -50%);
+}
+
+.features {
+    background-color: #fafafa;
+    color           : #000;
+    padding         : 63px 0 124px 0;
+}
+
+.features h2 {
+    text-align: center;
+
+    font: {
+        weight: 600;
+        size  : 36px;
+    }
+
+    margin-bottom: 63px;
+}
+
+.features__inner {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.feature-block {
+    margin-right: 30px;
+
+    position: relative;
+}
+
+.feature-block:last-child {
+    margin-right: 0;
+}
+
+.feature-block img {
+    border-radius: 8px;
+}
+
+.feature-block__inner {
+    background   : #fff;
+    box-shadow   : 0 5px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding      : 33px 20px 25px 20px;
+    width        : 78%;
+    position     : absolute;
+    bottom       : -96px;
+    left         : 42px;
+    text-align   : center;
+}
+
+.feature-block__inner h3 {
+    font: {
+        weight: 700;
+        size  : 18px;
+    }
+
+    margin-bottom: 20px;
+}
+
+.feature-block__inner p {
+    font-size    : 12px;
+    margin-bottom: 26px;
+}
+
+.feature__link {
+    font-size: 12px;
 }
